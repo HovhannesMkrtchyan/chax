@@ -1,7 +1,9 @@
 var http = require('http');
-
-//create a server object:
+var fs = require('fs');
 http.createServer(function (req, res) {
-  res.write('Hello World! Romik'); //write a response to the client
-  res.end(); //end the response
+  fs.readFile('index.html', function(err, data) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    res.end();
+  });
 }).listen(process.env.PORT || 5000); //the server object listens on port 8080
