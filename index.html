@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<title>Online books</title>
+	<style type="text/css">
+		.bookDiv button{
+			width:200px;
+			height:60px;
+			text-align:center;
+			color:black;
+			background:white;
+			border-color:black;
+			font-family: 'Indie Flower', cursive;
+			transition: 1s;
+			font-size: 150%;
+			margin:50px;
+		}
+		.bookDiv button:hover{
+			color:white;
+			background:black;
+			border-color:black;
+			transform:scale(1.3);
+		}
+		br{
+			height:50px;
+		}
+		#show embed{
+			width:100%;
+			height:100%;
+			position:absolute;
+			top:0px;
+			left:0px;
+		}
+	</style>
+</head>
+<body>
+<div id="explenation">
+bla bla bla
+</div>
+<div class="bookDiv">
+	<button onclick="showBook(1)">First book</button>
+</div>
+<br>
+<div class="bookDiv">
+	<button onclick="showBook(2)">Second book</button>
+</div>
+<br>
+<div class="bookDiv">
+	<button onclick="showBook(3)">Third book</button>
+</div>
+<br>
+<div id="show">
+</div>
+<script type="text/javascript">
+	function showBook(i){
+		switch(i){
+			case 1:
+				document.getElementById("show").innerHTML ="<embed src='files/19.informatika_9_dasaran_TM_.pdf' width='500px' height='200px'>";
+				break;
+			case 2:
+				document.getElementById("show").innerHTML ="<embed src='files/INFORMATIKA_7_DAS.pdf' width='500px' height='200px'>";
+				break;
+			case 3:
+				document.getElementById("show").innerHTML ="<embed src='files/informatika_8_dasaran.pdf' width='500px' height='200px'>";
+				break;
+		}
+	}
+</script>
+</body>
+</html>
